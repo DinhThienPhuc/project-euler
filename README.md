@@ -1,7 +1,7 @@
 # Project Euler Solutions
 
 - The solution (or algorimth) for each of problem in [Project Euler](https://projecteuler.net).
-- This repo uses Javascript and none of its methods (or functions)
+- This repo uses Javascript and some of its useful methods (or functions)
 
 ## Example for isPalindromic() function
 ```Javascript
