@@ -21,4 +21,4 @@ module.exports = function (num) {
 ```
 
 - This repo just shows one in many solutions to solve the problem.
-- Any additional approach will be welcome and discuss and improve
+- Any additional approach will be welcome, discuss and improve
