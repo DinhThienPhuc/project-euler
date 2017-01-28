@@ -2,5 +2,7 @@ const STR = '7316717653133062491922511967442657474235534919493496983520312774506
 
 const range = 13;
 
-module.exports.STR = STR;
-module.exports.range = range;
+module.exports = {
+    STR: STR,
+    range: range
+}
