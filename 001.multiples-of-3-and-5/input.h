@@ -6,8 +6,8 @@
 
 // Find the sum of all the multiples of 3 or 5 below 1000.
 
-int first_number = 3;
-int second_number = 5;
-int ceiling_number = 1000;
+int FIRST_NUMBER = 3;
+int SECOND_NUMBER = 5;
+int CEILING_NUMBER = 1000;
 
 #endif // MULTIPLES_OF_3_AND_5_H_
