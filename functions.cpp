@@ -1,0 +1,4 @@
+bool isPrimeFactor(int number)
+{
+    
+}
