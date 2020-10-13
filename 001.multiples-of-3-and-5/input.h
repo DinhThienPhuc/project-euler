@@ -8,6 +8,6 @@
 
 int FIRST_NUMBER = 3;
 int SECOND_NUMBER = 5;
-int CEILING_NUMBER = 1000;
+int LIMIT = 1000;
 
 #endif // MULTIPLES_OF_3_AND_5

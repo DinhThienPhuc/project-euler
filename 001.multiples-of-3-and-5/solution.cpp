@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
     int sum = 0;
-    for (int i = 0; i < CEILING_NUMBER; i++)
+    for (int i = 0; i < LIMIT; i++)
     {
         if (i % FIRST_NUMBER == 0 || i % SECOND_NUMBER == 0)
         {
