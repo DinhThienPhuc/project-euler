@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# $1 is folder name
+# $2 is problem name in snake-uppercase
+
 mkdir $1
 touch $1/input.h
 touch $1/answer.cpp
@@ -7,9 +10,9 @@ touch $1/answer
 touch $1/solution.cpp
 touch $1/solution
 
-echo "#ifndef _" >>$1/input.h
-echo "#define _ " >>$1/input.h
-echo "#endif // _" >>$1/input.h
+echo "#ifndef $2" >>$1/input.h
+echo "#define $2 " >>$1/input.h
+echo "#endif // $2" >>$1/input.h
 
 echo "#include <iostream>" >>$1/answer.cpp
 echo "#include \"input.h\"" >>$1/answer.cpp
