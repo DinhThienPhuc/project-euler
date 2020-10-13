@@ -8,7 +8,7 @@ int main()
     int second_fib = SECOND_NUMBER;
     int current_fib = first_fib + second_fib;
     int sum = SECOND_NUMBER;
-    while (current_fib < CEILING_NUMBER)
+    while (current_fib < LIMIT)
     {
         first_fib = second_fib;
         second_fib = current_fib;
