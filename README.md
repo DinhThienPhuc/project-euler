@@ -1,9 +1,10 @@
 # Project Euler Solutions
 
 - The solution (or algorimth) for each of problem in [Project Euler](https://projecteuler.net).
-- This repo uses Javascript, C, maybe Python and their libraries.
+- This repo uses Javascript, C, C++, maybe Python and their libraries.
 
 ## Example for isPalindromic() function
+
 ```Javascript
 var splitNumber = require('./splitNumber');
 
@@ -20,5 +21,5 @@ module.exports = function (num) {
 }
 ```
 
-- This repo just shows one in many solutions to solve the problem.
+- This repo shows my solution to solve the problem and recommended Project Euler solution.
 - Any additional approach will be welcome, discussed and improved.
