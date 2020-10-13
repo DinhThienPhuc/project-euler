@@ -23,3 +23,33 @@ module.exports = function (num) {
 
 - This repo shows my solution to solve the problem and recommended Project Euler solution.
 - Any additional approach will be welcome, discussed and improved.
+
+## Guide for solve problem
+
+- Run `create-problem.sh` file to create problem correspond with Project Euler problem.
+
+```bash
+./create-problem.sh 0001.multiples-of-3-and-5 MULTIPLES_OF_3_AND_5
+```
+
+Folder format: `<problem-number>.<problem-name>`
+Example: `0001.multiples-of-3-and-5`
+
+- Write problem requirements, input params in `input.h`
+- Write code in `solution.cpp`
+- Compile and run solution using `compile.sh` file
+
+```bash
+./compile.sh solution
+```
+
+- Submit result to Project Euler website for checking
+- Copy and paste the overview.pdf file for best answer
+- Rewrite the answer by yourself to `answer.cpp` file
+- Compile and run answer using `compile.sh` file
+
+```bash
+./compile.sh answer
+```
+
+- Check the answer and self-study for better knowledge
