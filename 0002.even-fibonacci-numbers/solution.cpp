@@ -4,18 +4,18 @@ using namespace std;
 
 int main()
 {
-    int first_fib = FIRST_NUMBER;
-    int second_fib = SECOND_NUMBER;
-    int current_fib = first_fib + second_fib;
+    int firstFib = FIRST_NUMBER;
+    int secondFib = SECOND_NUMBER;
+    int currentFib = firstFib + secondFib;
     int sum = SECOND_NUMBER;
-    while (current_fib < LIMIT)
+    while (currentFib < LIMIT)
     {
-        first_fib = second_fib;
-        second_fib = current_fib;
-        current_fib = first_fib + second_fib;
-        if (current_fib % 2 == 0)
+        firstFib = secondFib;
+        secondFib = currentFib;
+        currentFib = firstFib + secondFib;
+        if (currentFib % 2 == 0)
         {
-            sum += current_fib;
+            sum += currentFib;
         }
     }
     cout << sum;
