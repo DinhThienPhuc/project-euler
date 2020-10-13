@@ -40,7 +40,7 @@ Example: `0001.multiples-of-3-and-5`
 - Compile and run solution using `compile.sh` file
 
 ```bash
-./compile.sh solution
+./compile.sh 0001.multiples-of-3-and-5 solution
 ```
 
 - Submit result to Project Euler website for checking
@@ -49,7 +49,7 @@ Example: `0001.multiples-of-3-and-5`
 - Compile and run answer using `compile.sh` file
 
 ```bash
-./compile.sh answer
+./compile.sh 0001.multiples-of-3-and-5 answer
 ```
 
 - Check the answer and self-study for better knowledge
