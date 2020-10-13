@@ -1,0 +1,10 @@
+{
+  "editor.formatOnSave": true,
+  "files.associations": {
+    "*.sh": "shellscript",
+    "*.conf": "NGINX",
+    "__config": "cpp",
+    "iostream": "cpp"
+  },
+  "editor.tabSize": 4,
+}
