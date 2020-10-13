@@ -14,7 +14,9 @@ echo "#endif // _" >>$1/input.h
 echo "#include <iostream>" >>$1/answer.cpp
 echo "#include \"input.h\"" >>$1/answer.cpp
 echo "using namespace std;" >>$1/answer.cpp
+echo "int main() {};" >>$1/answer.cpp
 
 echo "#include <iostream>" >>$1/solution.cpp
 echo "#include \"input.h\"" >>$1/solution.cpp
 echo "using namespace std;" >>$1/solution.cpp
+echo "int main() {};" >>$1/solution.cpp
