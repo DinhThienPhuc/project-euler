@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-bool isPrimeFactor(int number)
+bool isPrime(int number)
 {
     if (number <= 1)
     {
