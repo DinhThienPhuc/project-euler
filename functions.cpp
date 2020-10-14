@@ -1,23 +1,18 @@
 #include <stdio.h>
 #include <math.h>
 
-int isPrimeFactor(int number)
+bool isPrimeFactor(int number)
 {
-    if (number == 2)
+    if (number <= 1)
     {
-        return 1;
+        return false;
     }
-    int count = 0;
-    for (int i = 3; i < sqrt(number); i += 2)
+    for (int i = 2; i < number; i++)
     {
         if (number % i == 0)
         {
-            count++;
+            return false;
         }
     }
-    if (count > 1)
-    {
-        return 0;
-    }
-    return 1;
+    return true;
 }
