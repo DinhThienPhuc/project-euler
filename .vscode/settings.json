@@ -4,7 +4,9 @@
     "*.sh": "shellscript",
     "*.conf": "NGINX",
     "__config": "cpp",
-    "iostream": "cpp"
-  },
+    "iostream": "cpp",
+    "string": "cpp",
+    "iosfwd": "cpp"
+},
   "editor.tabSize": 4,
 }
