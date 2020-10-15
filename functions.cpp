@@ -37,3 +37,25 @@ bool isPalindrome(int number)
 
     return true;
 }
+
+long getGreatestMultiple(long a, long b)
+{
+    long less = a > b ? b : a;
+    long greater = a > b ? a : b;
+    long greatestMultiple = 1;
+
+    for (long i = less; i >= 1; i--)
+    {
+        if (less % i == 0 && greater % i == 0)
+        {
+            greatestMultiple = i;
+            break;
+        }
+    }
+    return greatestMultiple;
+}
+
+long getSmallestMultiple(long a, long b)
+{
+    return abs(a * b) / getGreatestMultiple(a, b);
+}
