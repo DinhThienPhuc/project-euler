@@ -10,13 +10,7 @@ int main()
     int i = 4;
     while (i <= LIMIT)
     {
-        cout << smallestMultiple << endl;
-        cout << i << endl;
         smallestMultiple = getSmallestMultiple(smallestMultiple, i);
-        cout << "--" << endl;
-        cout << smallestMultiple << endl;
-
-        cout << "-----------------" << endl;
         i++;
     }
 

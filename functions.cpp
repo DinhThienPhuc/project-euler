@@ -1,15 +1,16 @@
 #include <stdio.h>
 #include <math.h>
 #include <string>
+#include <vector>
 using namespace std;
 
-bool isPrime(int number)
+bool isPrime(long number)
 {
     if (number <= 1)
     {
         return false;
     }
-    for (int i = 2; i < number; i++)
+    for (long i = 2; i < number; i++)
     {
         if (number % i == 0)
         {
@@ -19,13 +20,13 @@ bool isPrime(int number)
     return true;
 }
 
-bool isPalindrome(int number)
+bool isPalindrome(long number)
 {
     string stringNumber = to_string(number);
-    int len = stringNumber.length();
-    int loopRange = int(len / 2);
+    long len = stringNumber.length();
+    long loopRange = long(len / 2);
 
-    for (int i = 0; i < loopRange; i++)
+    for (long i = 0; i < loopRange; i++)
     {
         char c1 = stringNumber[i];
         char c2 = stringNumber[len - i - 1];
@@ -58,4 +59,17 @@ long getGreatestMultiple(long a, long b)
 long getSmallestMultiple(long a, long b)
 {
     return abs(a * b) / getGreatestMultiple(a, b);
+}
+
+vector<long> getPrimesLessThan(long num)
+{
+    vector<long> arr;
+    for (long i = 2; i <= num; i++)
+    {
+        if (isPrime(i))
+        {
+            arr.push_back(i);
+        }
+    }
+    return arr;
 }
