@@ -6,17 +6,43 @@ using namespace std;
 
 bool isPrime(long number)
 {
-    if (number <= 1)
+    if (number == 1)
     {
         return false;
     }
-    for (long i = 2; i < number; i++)
+    if (number < 4)
     {
-        if (number % i == 0)
+        return true; //2 and 3 are prime
+    }
+    if (number % 2 == 0)
+    {
+        return false;
+    }
+    if (number < 9)
+    {
+        return true; //we have already excluded 4,6 and 8.
+    }
+    if (number % 3 == 0)
+    {
+        return false;
+    }
+
+    long r = floor(sqrt(number)); // sqrt(n) rounded to the greatest integer r so that r*r<=n
+    long f = 5;
+
+    while (f <= r)
+    {
+        if (number % f == 0)
         {
             return false;
         }
+        if (number % (f + 2) == 0)
+        {
+            return false;
+        }
+        f = f + 6;
     }
+
     return true;
 }
 
