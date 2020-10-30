@@ -1,20 +1,7 @@
 #include <iostream>
 #include "input.h"
+#include "../functions.cpp"
 using namespace std;
-
-long long getMultiple(int set[])
-{
-    long long result = 1;
-    for (int i = 0; i < RANGE; i++)
-    {
-        if (set[i] == 0)
-        {
-            return 0;
-        }
-        result *= set[i];
-    }
-    return result;
-}
 
 int main()
 {
@@ -27,7 +14,7 @@ int main()
         {
             currentSet[j] = THOUSAND_DIGITS[i + j];
         }
-        long long setValue = getMultiple(currentSet);
+        long long setValue = getMultipleOfSet(currentSet, RANGE);
         if (setValue > maxValue)
         {
             maxValue = setValue;

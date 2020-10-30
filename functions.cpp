@@ -99,3 +99,17 @@ vector<long> getPrimesLessThan(long num)
     }
     return arr;
 }
+
+long long getMultipleOfSet(int set[], int range)
+{
+    long long result = 1;
+    for (int i = 0; i < range; i++)
+    {
+        if (set[i] == 0)
+        {
+            return 0;
+        }
+        result *= set[i];
+    }
+    return result;
+}
