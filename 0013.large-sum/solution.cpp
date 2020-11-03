@@ -38,7 +38,10 @@ int main()
         addedToBefore = floor(addedToBefore / 10);
     }
 
-    arr.push_back(addedToBefore);
+    if (addedToBefore != 0)
+    {
+        arr.push_back(addedToBefore);
+    }
 
     for (vector<int>::reverse_iterator it = arr.rbegin(); it != arr.rend(); ++it)
     {
