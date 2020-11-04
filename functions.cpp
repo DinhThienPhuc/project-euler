@@ -113,3 +113,20 @@ long long getMultipleOfSet(int set[], int range)
     }
     return result;
 }
+
+bool isPerfectSquare(long double x)
+{
+    // Find floating point value of
+    // square root of x.
+    long double sr = sqrt(x);
+
+    // If square root is an integer
+    return (sr - floor(sr)) == 0;
+}
+
+int getGreatestCommonDivisor(int a, int b)
+{
+    if (b == 0)
+        return a;
+    return getGreatestCommonDivisor(b, a % b);
+}
