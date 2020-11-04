@@ -130,3 +130,44 @@ int getGreatestCommonDivisor(int a, int b)
         return a;
     return getGreatestCommonDivisor(b, a % b);
 }
+
+vector<int> getPrimeFactors(int n)
+{
+    vector<int> arr;
+
+    // Print the number of 2s that divide n
+    bool hasThisPrime = false;
+    while (n % 2 == 0)
+    {
+        if (!hasThisPrime)
+        {
+            arr.push_back(2);
+            hasThisPrime = true;
+        }
+        n = n / 2;
+    }
+
+    // n must be odd at this point. So we can skip one element (Note i = i +2)
+    for (int i = 3; i <= sqrt(n); i = i + 2)
+    {
+        // While i divides n, print i and divide n
+        bool hasThisPrime = false;
+        while (n % i == 0)
+        {
+            if (!hasThisPrime)
+            {
+                arr.push_back(i);
+                hasThisPrime = true;
+            }
+            n = n / i;
+        }
+    }
+
+    // This condition is to handle the case when n is a prime number greater than 2
+    if (n > 2)
+    {
+        arr.push_back(n);
+    }
+
+    return arr;
+}
