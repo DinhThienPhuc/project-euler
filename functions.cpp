@@ -2,6 +2,7 @@
 #include <math.h>
 #include <string>
 #include <vector>
+#include <map>
 using namespace std;
 
 bool isPrime(long number)
@@ -170,4 +171,50 @@ vector<int> getPrimeFactors(int n)
     }
 
     return arr;
+}
+
+long long factorial(long n)
+{
+    return (n == 1 || n == 0) ? 1 : n * factorial(n - 1);
+}
+
+long long factorialPartion(long start, long end)
+{
+    long result = 1;
+
+    for (long i = start; i <= end; i++)
+    {
+        result *= i;
+    }
+
+    return result;
+}
+
+map<int, int> getBaseExponentDict(long long number, vector<int> bases)
+{
+    map<int, int> baseExponentDict;
+
+    for (vector<int>::iterator it = bases.begin(); it != bases.end(); ++it)
+    {
+        int maxExponent = floor(log(number) / log(*it));
+
+        for (int e = maxExponent; e >= 1; e--)
+        {
+            int p = pow(*it, e);
+            if (number % p == 0)
+            {
+                if (baseExponentDict[*it] != 0)
+                {
+                    baseExponentDict[*it] = baseExponentDict[*it] + e;
+                }
+                else
+                {
+                    baseExponentDict[*it] = e;
+                }
+                break;
+            }
+        }
+    }
+
+    return baseExponentDict;
 }
