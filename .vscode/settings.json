@@ -65,7 +65,8 @@
     "utility": "cpp",
     "vector": "cpp",
     "__memory": "cpp",
-    "map": "cpp"
+    "map": "cpp",
+    "__tree": "cpp"
 },
   "editor.tabSize": 4,
 }
