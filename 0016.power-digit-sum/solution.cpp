@@ -18,13 +18,16 @@ int main()
 
         for (vector<int>::iterator digit = originDigits.begin(); digit != originDigits.end(); ++digit)
         {
-            int newDigit = (*digit * 2) % 10 + previousPlus;
-            previousPlus = (*digit * 2) / 10;
-            newDigits.push_back(newDigit);
+            long digitCalculation = *digit * 2 + previousPlus;
+            int remainder = digitCalculation % 10;
+            previousPlus = digitCalculation / 10;
+            newDigits.push_back(remainder);
         }
-        if (previousPlus)
+
+        while (previousPlus > 0)
         {
-            newDigits.push_back(previousPlus);
+            newDigits.push_back(previousPlus % 10);
+            previousPlus /= 10;
         }
 
         originDigits = newDigits;
