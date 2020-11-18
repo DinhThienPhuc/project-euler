@@ -10,7 +10,7 @@ const {
     factorial,
     factorialPartion,
     getBaseExponentDict,
-} = require("./functions")
+} = require("./functions.js")
 
 describe("Check function [isPrime]:", () => {
     test("empty string should be false", async () => {
