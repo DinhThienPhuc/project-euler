@@ -1,6 +1,6 @@
 #include <iostream>
 #include "input.h"
-#include "../functions.cpp"
+#include "../../helpers/functions.cpp"
 using namespace std;
 
 int main()

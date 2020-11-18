@@ -2,7 +2,7 @@
 #include "input.h"
 #include "math.h"
 #include "vector"
-#include "../functions.cpp"
+#include "../../helpers/functions.cpp"
 using namespace std;
 
 int main()
