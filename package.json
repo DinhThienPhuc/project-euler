@@ -4,8 +4,8 @@
   "description": "Solutions for each problem",
   "main": "none",
   "scripts": {
-    "test": "jest --verbose true",
-    "partial-test": "jest --verbose true -t $PATTERN"
+    "test-all": "jest --verbose true",
+    "test": "jest --verbose true ./problems/$PROBLEM"
   },
   "repository": {
     "type": "git",

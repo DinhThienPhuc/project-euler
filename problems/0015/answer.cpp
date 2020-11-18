@@ -13,7 +13,7 @@ int main()
         result = result * numerator / denominator;
     }
 
-    printf("%12.12f", result);
+    cout << "C++: " << long(result) << "  - (answer)" << endl;
 
     return 0;
 }

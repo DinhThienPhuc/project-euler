@@ -105,7 +105,7 @@ int main()
         denominator *= pow(itr->first, itr->second);
     }
 
-    cout << numerator / denominator << endl;
+    cout << "C++: " << numerator / denominator << "  - (solution)" << endl;
 
     return 0;
 }
