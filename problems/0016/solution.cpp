@@ -38,7 +38,7 @@ int main()
         sum += *digit;
     }
 
-    cout << sum << endl;
+    cout << "C++: " << sum << "  - (solution)" << endl;
 
     return 0;
 }
