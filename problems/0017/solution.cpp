@@ -71,7 +71,6 @@ int main()
         // 100 ~ 999
         if (n <= 999)
         {
-            int unit = n % 100;
             int hundredUnit = floor(n / 100);
             int tensOf = n - hundredUnit * 100;
             string numberLetter = numberDict[hundredUnit] + "hundred";
@@ -92,7 +91,7 @@ int main()
         }
     }
 
-    cout << numberLetterCounts << endl;
+    cout << "C++: " << numberLetterCounts << "  - (solution)" << endl;
 
     return 0;
 }
