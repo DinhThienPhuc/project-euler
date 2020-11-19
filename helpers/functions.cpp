@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <algorithm>
 using namespace std;
 
 bool isPrime(long number)
@@ -217,4 +218,41 @@ map<int, int> getBaseExponentDict(long long number, vector<int> bases)
     }
 
     return baseExponentDict;
+}
+
+vector<long> getProperDivisorsOf(long number)
+{
+    vector<long> arr;
+    arr.push_back(1);
+
+    for (long n = 2; n < number; n++)
+    {
+        if (number % n == 0)
+        {
+            arr.push_back(n);
+        }
+    }
+
+    return arr;
+}
+
+long getSumOfListNumbers(vector<long> list)
+{
+    long sum = 0;
+
+    for (vector<long>::iterator it = list.begin(); it != list.end(); ++it)
+    {
+        sum += *it;
+    }
+
+    return sum;
+}
+
+bool includes(vector<long> arr, long number)
+{
+    if (find(arr.begin(), arr.end(), number) != arr.end())
+    {
+        return true;
+    }
+    return false;
 }

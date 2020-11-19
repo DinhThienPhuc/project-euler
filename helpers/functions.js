@@ -153,6 +153,26 @@ const getBaseExponentDict = (number, bases = []) => {
     return baseExponentDict
 }
 
+const getProperDivisorsOf = (number) => {
+    if (!Number.isInteger(number)) return []
+
+    const result = [1]
+
+    for (let n = 2; n < number; n++) {
+        if (number % n === 0) {
+            result.push(n)
+        }
+    }
+
+    return result
+}
+
+const getSumOfListNumbers = (list = []) => {
+    if (!Array.isArray(list)) return 0
+
+    return list.reduce((a, b) => a + b, 0)
+}
+
 module.exports = {
     isPrime,
     isPalindrome,
@@ -166,4 +186,6 @@ module.exports = {
     factorial,
     factorialPartion,
     getBaseExponentDict,
+    getProperDivisorsOf,
+    getSumOfListNumbers,
 }
