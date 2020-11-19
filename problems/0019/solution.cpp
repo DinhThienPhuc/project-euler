@@ -21,8 +21,7 @@ bool isLeapYear(int year)
 int main()
 {
     // 1 January 1900 was a Monday.
-    int daysOf1900 = 365;
-    int numberOfSundayAsFirstOfMonth = 0;
+    int daysFromBaseToStartYear = 0;
     map<int, int> dayRemaindedByMonth;
 
     dayRemaindedByMonth[1] = 3;
@@ -42,16 +41,22 @@ int main()
     // as a result, first day of August is thursday.
     // First of July: 2 (monday) -> First of August: 5 (thursday) = 2 + dayRemaindedByMonth[7];
 
-    if (isLeapYear(BASE_YEAR))
+    for (int y = BASE_YEAR; y < START_YEAR; y++)
     {
-        daysOf1900 = 366;
+        if (isLeapYear(y))
+        {
+            daysFromBaseToStartYear += 366;
+        }
+        else
+        {
+            daysFromBaseToStartYear += 365;
+        }
     }
 
-    int firstDayJanuaryOf1991 = daysOf1900 % 7 + 2;
-    int firstDayOfPreviousMonth = firstDayJanuaryOf1991;
+    int firstDayOfPreviousMonth = daysFromBaseToStartYear % 7 + 2;
     int currentMonth = 2;
     int currentYear = START_YEAR;
-    int countSundays = 0;
+    int countSundays = firstDayOfPreviousMonth == 8 ? 1 : 0;
 
     while (currentYear < END_YEAR + 1)
     {
@@ -81,7 +86,7 @@ int main()
         }
     }
 
-    cout << countSundays << endl;
+    cout << "C++: " << countSundays << "  - (solution)" << endl;
 
     return 0;
 }
