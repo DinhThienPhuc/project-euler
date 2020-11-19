@@ -2,7 +2,6 @@
 #include "input.h"
 #include "vector"
 #include "math.h"
-#include "../../helpers/functions.cpp"
 using namespace std;
 
 int main()
@@ -41,7 +40,7 @@ int main()
         sum += *it;
     }
 
-    cout << sum << endl;
+    cout << "C++: " << sum << "  - (solution)" << endl;
 
     return 0;
 }
