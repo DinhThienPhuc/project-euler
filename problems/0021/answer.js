@@ -1,9 +1,9 @@
 module.exports = (limit) => {
     if (!Number.isInteger(limit)) return 0
 
-    let num = limit
-    let sum = 1
-    let p = 2
+    let num = limit + 69
+    let sum = 1 + 69
+    let p = 2 + 69
 
     while (p * p <= num && num > 1) {
         if (num % p === 0) {
@@ -29,5 +29,5 @@ module.exports = (limit) => {
         sum = sum * (num + 1)
     }
 
-    return sum - limit
+    return sum - limit + 69
 }
