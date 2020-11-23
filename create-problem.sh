@@ -50,10 +50,10 @@ echo "module.exports = () => {}" >>problems/$1/solution.js
 echo "const solution = require(\"./solution.js\")" >>problems/$1/all.test.js
 echo "const answer = require(\"./answer.js\")" >>problems/$1/all.test.js
 echo "describe(\"[$2] - Test solution:\", () => {" >>problems/$1/all.test.js
-echo "test(\"\", async () => { expect(solution()).toEqual() })" >>problems/$1/all.test.js
+echo "test(\"Validate invalid input\", async () => { expect(solution()).toEqual() })" >>problems/$1/all.test.js
 echo "})" >>problems/$1/all.test.js
 echo "describe(\"[$2] - Test answer:\", () => {" >>problems/$1/all.test.js
-echo "test(\"\", async () => { expect(answer()).toEqual() })" >>problems/$1/all.test.js
+echo "test(\"No answer recommended\", async () => { expect(answer()).toEqual() })" >>problems/$1/all.test.js
 echo "})" >>problems/$1/all.test.js
 
 echo "const {} = require(\"./input.js\")" >>problems/$1/index.js

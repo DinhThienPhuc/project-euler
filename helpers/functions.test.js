@@ -10,6 +10,8 @@ const {
     factorial,
     factorialPartion,
     getBaseExponentDict,
+    getProperDivisorsOf,
+    getSumOfListNumbers,
 } = require("./functions.js")
 
 describe("Check function [isPrime]:", () => {
@@ -220,5 +222,43 @@ describe("Check function [getBaseExponentDict]:", () => {
             3: 1,
             5: 1,
         })
+    })
+})
+
+describe("Check function [getProperDivisorsOf]:", () => {
+    test("invalid input should return []", async () => {
+        expect(getProperDivisorsOf("abc")).toEqual([])
+    })
+    test("Proper divisors of 220", async () => {
+        expect(getProperDivisorsOf(220)).toEqual([
+            1,
+            2,
+            4,
+            5,
+            10,
+            11,
+            20,
+            22,
+            44,
+            55,
+            110,
+        ])
+    })
+    test("Proper divisors of 284", async () => {
+        expect(getProperDivisorsOf(284)).toEqual([1, 2, 4, 71, 142])
+    })
+})
+
+describe("Check function [getSumOfListNumbers]:", () => {
+    test("invalid input should return 0", async () => {
+        expect(getSumOfListNumbers("abc")).toEqual(0)
+    })
+    test("Sum of array is 284", async () => {
+        expect(
+            getSumOfListNumbers([1, 2, 4, 5, 10, 11, 20, 22, 44, 55, 110])
+        ).toEqual(284)
+    })
+    test("Sum of array is 220", async () => {
+        expect(getSumOfListNumbers([1, 2, 4, 71, 142])).toEqual(220)
     })
 })

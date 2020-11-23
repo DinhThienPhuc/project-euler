@@ -5,7 +5,8 @@
   "main": "none",
   "scripts": {
     "test-all": "jest --verbose true",
-    "test": "jest --verbose true ./problems/$PROBLEM"
+    "test": "jest --verbose true ./problems/$PROBLEM",
+    "test-helpers": "jest --verbose true ./helpers"
   },
   "repository": {
     "type": "git",
