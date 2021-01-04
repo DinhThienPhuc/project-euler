@@ -6,6 +6,7 @@ describe("[NAMES_SCORES] - Test solution:", () => {
         expect(solution()).toEqual()
     })
 })
+
 describe("[NAMES_SCORES] - Test answer:", () => {
     test("No answer recommended", async () => {
         expect(answer()).toEqual()

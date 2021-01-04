@@ -1,52 +1,63 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <set>
 #include <vector>
 using namespace std;
 
 int main()
 {
-    ifstream names;
+    int SUBTRACT_RANGE = 64;
     string line;
     string content;
     string word;
     string delimiter = "\",\"";
-    vector<string> arr;
+    set<string> arr;
+    long result = 0;
 
-    names.open("./problems/0022/first_names.txt");
+    ifstream myfile("./problems/0022/first_names.txt");
 
-    if (names.is_open())
+    if (myfile.is_open() && getline(myfile, line))
     {
-        while (getline(names, line))
-        {
-            content += line;
-        }
-        names.close();
+        content = line;
+        myfile.close();
     }
 
-    // for (int i = 0, len = content.length(); i < len; i++)
-    // {
-    //     string character = content[i];
+    int contentLength = content.length();
 
-    //     if (character == "\"" || character == ",")
-    //     {
-    //         arr.push_back(word);
-    //         word = "";
-    //     }
-    //     else
-    //     {
-    //         word = word + character;
-    //     }
-    // }
+    int i = 1;
 
-    // for (vector<string>::iterator it = arr.begin(); it != arr.end(); ++it)
-    // {
-    //     cout << 'meo: ' << *it << endl;
-    // }
+    while (i < contentLength)
+    {
+        if (content[i] != '"')
+        {
+            word += content[i];
+            i++;
+        }
+        else
+        {
+            arr.insert(word);
+            word = "";
+            i += 3;
+        }
+    }
 
-    // cout << "C++: "
-    //      << ""
-    //      << "  - (solution)" << endl;
+    for (set<string>::iterator it = arr.begin(); it != arr.end(); ++it)
+    {
+        string w = *it;
+        int wordSum = 0;
+        for (int i = 0, len = w.length(); i < len; i++)
+        {
+
+            wordSum += ((int)w[i] - SUBTRACT_RANGE);
+        }
+
+        long order = distance(arr.begin(), it) + 1;
+
+        result += (order * wordSum);
+    }
+
+    cout << "C++: " << result << "  - (solution)" << endl;
 
     return 0;
 }
