@@ -1,6 +1,8 @@
 const SUBTRACT_RANGE = 64
 
 module.exports = (names) => {
+    if (!Array.isArray(names)) return 0
+
     const sortedNames = [...names].sort(function (a, b) {
         if (a < b) return -1
         if (a > b) return 1
