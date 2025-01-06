@@ -1,84 +1,77 @@
 # Project Euler Solutions
 
--   The solution (or algorimths) for each of problem in [Project Euler](https://projecteuler.net).
--   This repo uses Javascript, C, C++, maybe Python and their libraries.
+A collection of solutions for [Project Euler](https://projecteuler.net) problems implemented in C/C++ programming languages.
 
-## Example for isPalindromic() function
+## Overview
 
-```Javascript
-var splitNumber = require('./splitNumber');
+This application provides algorithmic solutions to Project Euler mathematical/programming problems using:
 
-module.exports = function (num) {
-    var arr = splitNumber(num);
-    var flag = true;
-    for (let i = 0; i < arr.length / 2; i++) {
-        if (arr[i] !== arr[arr.length - i - 1]) {
-            flag = false;
-            break;
-        }
-    }
-    return flag;
-}
-```
+- C/C++
 
--   This repo shows my solution to solve the problem and recommended Project Euler solution.
--   Any additional approach will be welcome, discussed and improved.
-
-## Guide steps for solve problem
-
-1.  Run `create-problem.sh` file to create problem correspond with Project Euler problem.
+## Project Structure
 
 ```bash
-./create-problem.sh 0001 MULTIPLES_OF_3_AND_5
+project-euler/
+├── problems/ # Individual problem solutions
+│   └── 0001/ # Problem folders
+│       ├── answer.cpp # C/C++ implementation
+│       ├── input.h # C/C++ problem definition
+│       ├── overview.pdf # Solution explanation
+│       └── solution.cpp # C/C++ solution
+├── helpers/ # Shared utility functions
+├── create-problem.sh # SCript to quick template a problem
+└── run.sh # SCript to run problem's answer and solution
 ```
 
-Folder format: `<problem-number>`
+## Getting Started
 
-Example: `0001`
+### Prerequisites
 
-Problem name format: `<CONSTANCE_SNAKE_CASE>`
+- C++ compiler (GCC recommended)
 
-Example: `MULTIPLES_OF_3_AND_5`
+### Creating New Solutions
 
-2.  Write problem requirements, input params in `input.h` and `input.js`
-3.  Update `index.js` for output the result run by `*.js` files
-4.  Write code in `solution.cpp` and `solution.js`
-5.  Write unit test in `all.test.js` for testing `*.js` files, using Jest. Also write unit test in `functions.test.js` if add some new function helper
-6.  Run the command below for testing functions helper (if add more). If any test does not pass, fix that function
+1. Generate problem template:
 
 ```bash
-npm run test-helpers
+# Example: ./create-problem.sh 0001 MULTIPLES_OF_3_AND_5
+./create-problem.sh <number> <name>
 ```
 
-7.  Run the command below for testing solution. If any test does not pass, fix the solution
+2. Implement the answer in `problems/<number>/answer.cpp`
+3. Run and test solution:
 
 ```bash
-PROBLEM=<problem-number> npm run test
-// Example: PROBLEM=0001 npm run test
-```
-
-8.  If all test passed, compile and run solution using `run.sh` file
-
-```bash
-./run.sh problems/<problem-number>
-// Example: ./run.sh problems/0001
+# Example: ./run.sh problems/0001
+./run.sh problems/<number>
 ```
 
 9.  Submit result to Project Euler website for checking
 10. Copy and paste the overview.pdf file for best answer
-11. Rewrite the answer by yourself to `answer.cpp`, `answer.js` file
+11. Implement the solution in `problems/<number>/solution.cpp`
 12. Run the command below for testing answer. If any test does not pass, fix the answer
-
-```bash
-PROBLEM=<problem-number> npm run test
-// Example: PROBLEM=0001 npm run test
-```
-
 13. Re-compile and run answer using `run.sh` file
-
-```bash
-./run.sh problems/<problem-number>
-// Example: ./run.sh problems/0001
-```
-
 14. Check the answer and self-study for better knowledge
+
+## Development Workflow
+
+1. Problem Definition
+
+- Define problem requirements in input.h
+
+2. Implement
+
+- Write C++ solution in solution.cpp
+
+3. Verification
+
+- Compare with Project Euler website
+- Document optimal solution
+
+## License
+
+MIT
+
+## Author
+
+@DinhThienPhuc

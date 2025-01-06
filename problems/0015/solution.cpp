@@ -15,10 +15,10 @@ int main()
         int numerator = i + SIZE + 1;
         int denominator = i + 1;
 
-        vector<int> numberatorBases = getPrimeFactors(numerator);
+        vector<int> numeratorBases = getPrimeFactors(numerator);
         vector<int> denominatorBases = getPrimeFactors(denominator);
 
-        for (vector<int>::iterator it = numberatorBases.begin(); it != numberatorBases.end(); ++it)
+        for (vector<int>::iterator it = numeratorBases.begin(); it != numeratorBases.end(); ++it)
         {
             int maxExponent = floor(log(numerator) / log(*it));
 

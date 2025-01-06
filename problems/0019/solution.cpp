@@ -22,24 +22,24 @@ int main()
 {
     // 1 January 1900 was a Monday.
     int daysFromBaseToStartYear = 0;
-    map<int, int> dayRemaindedByMonth;
+    map<int, int> daysRemainingInMonth;
 
-    dayRemaindedByMonth[1] = 3;
-    dayRemaindedByMonth[2] = 0;
-    dayRemaindedByMonth[3] = 3;
-    dayRemaindedByMonth[4] = 2;
-    dayRemaindedByMonth[5] = 3;
-    dayRemaindedByMonth[6] = 2;
-    dayRemaindedByMonth[7] = 3;
-    dayRemaindedByMonth[8] = 3;
-    dayRemaindedByMonth[9] = 2;
-    dayRemaindedByMonth[10] = 3;
-    dayRemaindedByMonth[11] = 2;
-    dayRemaindedByMonth[12] = 3;
+    daysRemainingInMonth[1] = 3;
+    daysRemainingInMonth[2] = 0;
+    daysRemainingInMonth[3] = 3;
+    daysRemainingInMonth[4] = 2;
+    daysRemainingInMonth[5] = 3;
+    daysRemainingInMonth[6] = 2;
+    daysRemainingInMonth[7] = 3;
+    daysRemainingInMonth[8] = 3;
+    daysRemainingInMonth[9] = 2;
+    daysRemainingInMonth[10] = 3;
+    daysRemainingInMonth[11] = 2;
+    daysRemainingInMonth[12] = 3;
 
     // if first day of July is monday: monday is 1, so 29 also monday. and 31 is wednesday.
     // as a result, first day of August is thursday.
-    // First of July: 2 (monday) -> First of August: 5 (thursday) = 2 + dayRemaindedByMonth[7];
+    // First of July: 2 (monday) -> First of August: 5 (thursday) = 2 + daysRemainingInMonth[7];
 
     for (int y = BASE_YEAR; y < START_YEAR; y++)
     {
@@ -61,10 +61,10 @@ int main()
     while (currentYear < END_YEAR + 1)
     {
         int previousMonth = currentMonth == 1 ? 12 : currentMonth - 1;
-        int previousMonthDaysRemain = dayRemaindedByMonth[previousMonth];
+        int previousMonthDaysRemain = daysRemainingInMonth[previousMonth];
         if (isLeapYear(currentYear) && previousMonth == 2)
         {
-            previousMonthDaysRemain = dayRemaindedByMonth[previousMonth] + 1;
+            previousMonthDaysRemain = daysRemainingInMonth[previousMonth] + 1;
         }
         int firstDayOfCurrentMonth = firstDayOfPreviousMonth + previousMonthDaysRemain;
         firstDayOfCurrentMonth = firstDayOfCurrentMonth > 8 ? firstDayOfCurrentMonth - 7 : firstDayOfCurrentMonth;

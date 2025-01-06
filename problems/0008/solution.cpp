@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    int currentSet[RANGE];
+    int currentSet[13];
     long long maxValue = 1;
 
     for (int i = 0; i < THOUSAND - RANGE; i++)

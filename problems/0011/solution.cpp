@@ -13,8 +13,8 @@ int main()
         {
             int adjacentInRow[ADJACENT_NUMBERS_RANGE];
             int adjacentInCol[ADJACENT_NUMBERS_RANGE];
-            int adjacentInDownDiagon[ADJACENT_NUMBERS_RANGE];
-            int adjacentInUpDiagon[ADJACENT_NUMBERS_RANGE];
+            int adjacentInDownDiagonal[ADJACENT_NUMBERS_RANGE];
+            int adjacentInUpDiagonal[ADJACENT_NUMBERS_RANGE];
 
             // Adjacent in row
             for (int i = 0; i < ADJACENT_NUMBERS_RANGE; i++)
@@ -29,18 +29,18 @@ int main()
                 }
                 if (r <= GRID_SIZE - ADJACENT_NUMBERS_RANGE && c <= GRID_SIZE - ADJACENT_NUMBERS_RANGE)
                 {
-                    adjacentInDownDiagon[i] = GRID[r + i][c + i];
+                    adjacentInDownDiagonal[i] = GRID[r + i][c + i];
                 }
                 if (r >= ADJACENT_NUMBERS_RANGE - 1 && c <= GRID_SIZE - ADJACENT_NUMBERS_RANGE)
                 {
-                    adjacentInDownDiagon[i] = GRID[r - i][c + i];
+                    adjacentInDownDiagonal[i] = GRID[r - i][c + i];
                 }
             }
             long long products[4] = {
                 getMultipleOfSet(adjacentInRow, ADJACENT_NUMBERS_RANGE),
                 getMultipleOfSet(adjacentInCol, ADJACENT_NUMBERS_RANGE),
-                getMultipleOfSet(adjacentInDownDiagon, ADJACENT_NUMBERS_RANGE),
-                getMultipleOfSet(adjacentInUpDiagon, ADJACENT_NUMBERS_RANGE)};
+                getMultipleOfSet(adjacentInDownDiagonal, ADJACENT_NUMBERS_RANGE),
+                getMultipleOfSet(adjacentInUpDiagonal, ADJACENT_NUMBERS_RANGE)};
 
             for (int i = 0; i < 4; i++)
             {

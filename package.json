@@ -1,27 +1,16 @@
 {
   "name": "project-euler",
   "version": "1.0.0",
-  "description": "Solutions for each problem",
+  "description": "Solutions to Project Euler problems",
   "main": "none",
-  "scripts": {
-    "test-all": "jest --verbose true",
-    "test": "jest --verbose true ./problems/$PROBLEM",
-    "test-helpers": "jest --verbose true ./helpers"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DinhThienPhuc/project-euler.git"
   },
-  "keywords": [
-    "kaito-kid"
-  ],
   "author": "Dinh Thien Phuc",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/DinhThienPhuc/project-euler/issues"
   },
-  "homepage": "https://github.com/DinhThienPhuc/project-euler#readme",
-  "devDependencies": {
-    "jest": "^26.6.3"
-  }
+  "homepage": "https://github.com/DinhThienPhuc/project-euler#readme"
 }

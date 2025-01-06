@@ -11,7 +11,7 @@ int main()
     bool check = true;
     int sqrtLimit = int(sqrt(LIMIT));
     vector<long> primes = getPrimesLessThan(LIMIT);
-    long a[primes.size()];
+    vector<long> a(primes.size());
 
     for (size_t i = 0; i != primes.size(); ++i)
     {

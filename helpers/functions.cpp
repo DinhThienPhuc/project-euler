@@ -4,6 +4,7 @@
 #include <vector>
 #include <map>
 #include <algorithm>
+
 using namespace std;
 
 bool isPrime(long number)
@@ -14,7 +15,7 @@ bool isPrime(long number)
     }
     if (number < 4)
     {
-        return true; //2 and 3 are prime
+        return true; // 2 and 3 are prime
     }
     if (number % 2 == 0)
     {
@@ -22,7 +23,7 @@ bool isPrime(long number)
     }
     if (number < 9)
     {
-        return true; //we have already excluded 4,6 and 8.
+        return true; // we have already excluded 4,6 and 8.
     }
     if (number % 3 == 0)
     {
@@ -179,7 +180,7 @@ long long factorial(long n)
     return (n == 1 || n == 0) ? 1 : n * factorial(n - 1);
 }
 
-long long factorialPartion(long start, long end)
+long long factorialPartition(long start, long end)
 {
     long result = 1;
 

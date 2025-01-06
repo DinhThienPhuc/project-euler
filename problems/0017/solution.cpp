@@ -25,7 +25,7 @@ string getNumberLetterOfTwoDigitNumber(map<int, string> numberDict, int n)
 
 int main()
 {
-    //create a map that stores strings indexed by strings
+    // create a map that stores strings indexed by strings
     map<int, string> numberDict;
 
     numberDict[1] = "one";
